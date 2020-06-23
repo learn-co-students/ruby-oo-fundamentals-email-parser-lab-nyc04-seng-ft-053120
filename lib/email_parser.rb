@@ -4,11 +4,19 @@
 # or whitespace (' ').
 require 'pry'
 class EmailAddressParser
+    attr_accessor :emails
     def initialize(emails)
         @emails = emails
     end
-    attr_accessor :emails
+    
     def parse
-        @emails.split(/, | |,/).uniq
+        @emails.split(/,*\s|,/).uniq
     end
+
+    # def parse
+    #      @emails.split(' ').map do |email|
+    #          email[-1] == ',' ? email.slice(0..-2) : email
+    #      end
+    #      .uniq
+    # end
 end
