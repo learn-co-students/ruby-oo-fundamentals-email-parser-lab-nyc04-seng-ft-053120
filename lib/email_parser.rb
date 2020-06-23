@@ -19,3 +19,4 @@ end
 #line 15
 # [] match any character in that set.
 # + treats multiple spaces bewtween emails as a single character
+# .uniq excludes dupes
