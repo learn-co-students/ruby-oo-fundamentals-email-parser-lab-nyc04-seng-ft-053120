@@ -5,8 +5,8 @@
 
 class EmailAddressParser
 
-    def initialize(email)
-        @emails =  email 
+    def initialize(email_addresses)
+        @emails =  email_addresses
     end 
 
     attr_accessor :emails 
@@ -15,3 +15,8 @@ class EmailAddressParser
         @emails.delete(',').split.uniq
     end 
 end 
+
+email_addresses = "john@doe.com, person@somewhere.org"
+parser = EmailAddressParser.new(email_addresses)
+
+parser.parse 
