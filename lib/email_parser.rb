@@ -5,6 +5,6 @@ class EmailAddressParser
   end
 
   def parse
-    @emails_str.split(/\b(, | )\b/).uniq.select {|el| el.length > 2}
+    @emails_str.split(/, | /).uniq
   end
 end
