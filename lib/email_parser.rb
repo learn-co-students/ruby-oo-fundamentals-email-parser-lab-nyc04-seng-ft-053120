@@ -9,7 +9,8 @@ class EmailAddressParser
 
       def parse
        # binding.pry
-        @emails.split(/, | /).uniq
+       arr = [", "," "]
+        @emails.split(Regexp.union(arr)).uniq
       end
 
     end
